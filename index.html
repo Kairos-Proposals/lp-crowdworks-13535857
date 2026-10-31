@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUREVA LP制作のご提案 | Kairos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0E1E19;
+    --deep2:#17322A;
+    --deep3:#1F3F34;
+    --ivory:#F6F1E6;
+    --ivory2:#EFE8D8;
+    --gold:#C8A050;
+    --gold-light:#E6CD8C;
+    --sage:#8FA396;
+    --text-dark:#22312B;
+    --line:rgba(200,160,80,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans JP',sans-serif;
+    color:var(--text-dark);
+    background:var(--ivory);
+    line-height:1.9;
+    font-weight:300;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{
+    font-family:'Shippori Mincho','Cormorant Garamond',serif;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{
+    max-width:1040px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    background:radial-gradient(ellipse at 20% 0%, var(--deep3) 0%, var(--deep2) 45%, var(--deep) 100%);
+    color:var(--ivory);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    padding:80px 20px;
+  }
+  .facet{
+    position:absolute;
+    opacity:.55;
+    filter:blur(.3px);
+    animation:shimmer 7s ease-in-out infinite;
+  }
+  @keyframes shimmer{
+    0%,100%{opacity:.35; transform:translateY(0) scale(1);}
+    50%{opacity:.65; transform:translateY(-8px) scale(1.03);}
+  }
+  .facet-1{
+    width:380px;height:380px;
+    top:-110px;left:-90px;
+    background:linear-gradient(135deg, var(--gold-light), transparent 70%);
+    clip-path:polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    animation-delay:.2s;
+  }
+  .facet-2{
+    width:260px;height:260px;
+    bottom:-60px;right:-40px;
+    background:linear-gradient(135deg, var(--sage), transparent 70%);
+    clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation-delay:1.4s;
+  }
+  .facet-3{
+    width:180px;height:180px;
+    top:20%;right:6%;
+    background:linear-gradient(135deg, var(--gold), transparent 75%);
+    clip-path:polygon(50% 0%, 100% 100%, 0% 100%);
+    animation-delay:2.1s;
+  }
+  .facet-4{
+    width:140px;height:140px;
+    bottom:18%;left:4%;
+    background:linear-gradient(135deg, var(--gold-light), transparent 75%);
+    clip-path:polygon(0 0, 100% 0, 100% 100%);
+    animation-delay:.9s;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    max-width:720px;
+  }
+  .eyebrow{
+    font-size:.72rem;
+    letter-spacing:.32em;
+    color:var(--gold-light);
+    margin-bottom:28px;
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:"";
+    display:inline-block;
+    width:28px;height:1px;
+    background:var(--gold-light);
+    margin-right:12px;
+    vertical-align:middle;
+  }
+  .eyebrow::after{
+    content:"";
+    display:inline-block;
+    width:28px;height:1px;
+    background:var(--gold-light);
+    margin-left:12px;
+    vertical-align:middle;
+  }
+  .hero h1{
+    font-size:clamp(1.9rem, 4.6vw, 3.1rem);
+    font-weight:600;
+    line-height:1.7;
+    letter-spacing:.04em;
+    background:linear-gradient(120deg, var(--ivory) 20%, var(--gold-light) 55%, var(--ivory) 80%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero p.sub{
+    margin-top:28px;
+    font-size:.95rem;
+    color:#D9D2C0;
+    font-weight:300;
+    letter-spacing:.03em;
+  }
+  .hero .brand{
+    margin-top:48px;
+    font-size:.8rem;
+    letter-spacing:.25em;
+    color:var(--sage);
+  }
+  .scroll-cue{
+    position:absolute;
+    bottom:30px;left:50%;
+    transform:translateX(-50%);
+    width:1px;height:50px;
+    background:linear-gradient(var(--gold-light), transparent);
+    z-index:2;
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{
+    padding:100px 0;
+    position:relative;
+  }
+  .section-title{
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    font-weight:600;
+    text-align:center;
+    margin-bottom:18px;
+    letter-spacing:.06em;
+    color:var(--deep2);
+  }
+  .section-sub{
+    text-align:center;
+    font-size:.85rem;
+    letter-spacing:.2em;
+    color:var(--gold);
+    margin-bottom:60px;
+    font-weight:500;
+  }
+
+  /* ---------- UNDERSTANDING ---------- */
+  .understand{
+    background:var(--ivory);
+  }
+  .understand-lead{
+    max-width:680px;
+    margin:0 auto 56px;
+    text-align:center;
+    font-size:1.02rem;
+    color:#3C4A43;
+  }
+  .scene-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:16px;
+    max-width:900px;
+    margin:0 auto;
+  }
+  .scene{
+    background:var(--ivory2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:26px 10px 20px;
+    text-align:center;
+  }
+  .scene .mark{
+    width:34px;height:34px;
+    margin:0 auto 14px;
+    border:1px solid var(--gold);
+    transform:rotate(45deg);
+    position:relative;
+  }
+  .scene .mark::after{
+    content:"";
+    position:absolute;
+    inset:6px;
+    border:1px solid var(--gold-light);
+  }
+  .scene span{
+    font-size:.74rem;
+    color:var(--deep2);
+    letter-spacing:.03em;
+    line-height:1.5;
+    display:block;
+  }
+  .understand-note{
+    max-width:680px;
+    margin:56px auto 0;
+    padding:28px 32px;
+    border-left:2px solid var(--gold);
+    background:#fff;
+    font-size:.92rem;
+    color:#394943;
+  }
+
+  /* ---------- VALUE ---------- */
+  .value{
+    background:linear-gradient(180deg, var(--deep) 0%, var(--deep2) 100%);
+    color:var(--ivory);
+  }
+  .value .section-title{color:var(--ivory);}
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:26px;
+  }
+  .card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    padding:34px 26px;
+    border-radius:2px;
+    transition:transform .35s ease, border-color .35s ease, background .35s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .card::before{
+    content:"";
+    position:absolute;
+    top:-40%;left:-40%;
+    width:60%;height:180%;
+    background:linear-gradient(120deg, transparent, rgba(230,205,140,0.08), transparent);
+    transform:rotate(20deg);
+    transition:left .6s ease;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold-light);
+    background:rgba(255,255,255,0.05);
+  }
+  .card:hover::before{left:140%;}
+  .card .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    color:var(--gold-light);
+    margin-bottom:14px;
+    display:block;
+  }
+  .card h3{
+    font-size:1.05rem;
+    margin-bottom:12px;
+    font-weight:600;
+    letter-spacing:.03em;
+  }
+  .card p{
+    font-size:.86rem;
+    color:#C9C4B4;
+    font-weight:300;
+  }
+
+  /* ---------- SCHEDULE ---------- */
+  .schedule{
+    background:var(--ivory);
+  }
+  .timeline{
+    max-width:720px;
+    margin:0 auto;
+    position:relative;
+    padding-left:34px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:6px;top:6px;bottom:6px;
+    width:1px;
+    background:linear-gradient(var(--gold), var(--sage));
+  }
+  .t-item{
+    position:relative;
+    padding-bottom:46px;
+  }
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{
+    content:"";
+    position:absolute;
+    left:-34px;top:4px;
+    width:12px;height:12px;
+    background:var(--ivory);
+    border:2px solid var(--gold);
+    transform:rotate(45deg);
+  }
+  .t-item .t-date{
+    font-size:.74rem;
+    letter-spacing:.15em;
+    color:var(--gold);
+    margin-bottom:8px;
+    font-weight:500;
+  }
+  .t-item h3{
+    font-size:1.05rem;
+    margin-bottom:8px;
+    color:var(--deep2);
+    font-weight:600;
+  }
+  .t-item p{
+    font-size:.86rem;
+    color:#4B5750;
+  }
+
+  /* ---------- CLOSING ---------- */
+  .closing{
+    background:radial-gradient(ellipse at 50% 20%, var(--deep3), var(--deep) 70%);
+    color:var(--ivory);
+    text-align:center;
+    padding:120px 20px;
+  }
+  .closing h2{
+    font-size:clamp(1.6rem,3.5vw,2.3rem);
+    font-weight:600;
+    margin-bottom:24px;
+    color:var(--gold-light);
+    letter-spacing:.04em;
+  }
+  .closing p{
+    max-width:600px;
+    margin:0 auto 42px;
+    font-size:.92rem;
+    color:#D9D2C0;
+    font-weight:300;
+  }
+  .cta-btn{
+    display:inline-block;
+    padding:18px 54px;
+    border:1px solid var(--gold-light);
+    color:var(--gold-light);
+    font-size:.85rem;
+    letter-spacing:.2em;
+    position:relative;
+    transition:all .4s ease;
+  }
+  .cta-btn:hover{
+    background:var(--gold-light);
+    color:var(--deep);
+  }
+  .closing .foot-note{
+    margin-top:50px;
+    font-size:.72rem;
+    letter-spacing:.15em;
+    color:var(--sage);
+  }
+
+  footer{
+    background:var(--deep);
+    color:#7C8A82;
+    text-align:center;
+    padding:26px 20px;
+    font-size:.72rem;
+    letter-spacing:.1em;
+  }
+
+  @media (max-width:768px){
+    .scene-grid{grid-template-columns:repeat(2,1fr);}
+    section{padding:72px 0;}
+    .understand-note{padding:22px 20px;}
+    .timeline{padding-left:28px;}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="facet facet-1"></div>
+  <div class="facet facet-2"></div>
+  <div class="facet facet-3"></div>
+  <div class="facet facet-4"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">KAIROS PROPOSAL</p>
+    <h1>素材そのものの美しさを、<br>画面の中でも曇らせない。</h1>
+    <p class="sub">ジュエリー素材ブランド「PUREVA」様のブランドLP制作について、<br>Kairosよりコーディング・公開のご提案をさせていただきます。</p>
+    <p class="brand">P U R E V A &nbsp;&times;&nbsp; K A I R O S</p>
+  </div>
+  <div class="scroll-cue"></div>
+</section>
+
+<section class="understand">
+  <div class="wrap">
+    <p class="section-sub">UNDERSTANDING</p>
+    <h2 class="section-title">このLPは、「売る」ためではなく<br>「伝える」ためのもの。</h2>
+    <p class="understand-lead">
+      PUREVAのLPは、オンライン販売を目的としたECサイトではなく、
+      素材とブランドの価値を正しく届けるための情報提供ツールであると理解しております。
+      店頭、商談、展示会、SNS、QRコード――画面に触れる瞬間はさまざまでも、
+      そのすべてで「素材の質感」が損なわれないことが、最も大切な要件だと考えています。
+    </p>
+    <div class="scene-grid">
+      <div class="scene"><div class="mark"></div><span>店頭<br>接客時</span></div>
+      <div class="scene"><div class="mark"></div><span>BtoB<br>商談時</span></div>
+      <div class="scene"><div class="mark"></div><span>展示会<br>での案内</span></div>
+      <div class="scene"><div class="mark"></div><span>SNS<br>からの流入</span></div>
+      <div class="scene"><div class="mark"></div><span>QRコード<br>アクセス</span></div>
+    </div>
+    <div class="understand-note">
+      特にQRコードや店頭での閲覧は、通信環境や端末の明るさが一定ではありません。
+      だからこそ、デザインの再現だけでなく「どんな環境でも素材の輝きが伝わる実装」に
+      こだわってコーディングいたします。また、画像素材が①依頼時②11月末③12月末と
+      段階的に支給される前提も踏まえ、仮素材での先行実装と後日差し替えを
+      前提とした進行フローをご提案いたします。
+    </div>
+  </div>
+</section>
+
+<section class="value">
+  <div class="wrap">
+    <p class="section-sub">WHAT KAIROS OFFERS</p>
+    <h2 class="section-title">Kairosがご提供できる価値</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>デザインを損なわない実装力</h3>
+        <p>支給いただくスマホ版デザインを起点に、ピクセル単位の再現だけでなく、Webとして見たときの余白・階調・光の見え方まで調整し、素材の質感が伝わる形に仕上げます。</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>スマホファーストの体感設計</h3>
+        <p>主要な閲覧環境であるスマートフォンでの表示速度・スクロール挙動・軽やかなアニメーションを重視。PCでの表示にも違和感のないレスポンシブ設計を行います。</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>静的LPに適したインフラ構築</h3>
+        <p>独自ドメインでの公開に向け、静的LPに最適なサーバー構成をご提案。アップロードから公開設定までを一貫して対応し、不要なコストや複雑さを持ち込みません。</p>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <h3>GA4・Search Console設定</h3>
+        <p>既に運用中のGoogleアカウント環境を前提に、新ブランドLPの計測を正しく発火させる設定を実施。公開後にすぐアクセス状況を確認できる状態にいたします。</p>
+      </div>
+      <div class="card">
+        <span class="num">05</span>
+        <h3>段階的な素材支給への対応</h3>
+        <p>すべての画像が揃わない段階からの着手を前提に、仮素材での先行実装・後日差し替えを前提としたスケジュールと進行管理で、公開日からの逆算対応をいたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="schedule">
+  <div class="wrap">
+    <p class="section-sub">SCHEDULE IMAGE</p>
+    <h2 class="section-title">公開までの進め方（想定）</h2>
+    <div class="timeline">
+      <div class="t-item">
+        <p class="t-date">STEP 01 ・ 契約後すぐ</p>
+        <h3>デザイン・素材・コピーの共有</h3>
+        <p>スマホ版完成デザイン、ロゴ、先行支給分の画像・テキストをお預かりし、実装方針をすり合わせます。</p>
+      </div>
+      <div class="t-item">
+        <p class="t-date">STEP 02</p>
+        <h3>コーディング（仮素材での先行実装）</h3>
+        <p>未支給の画像は仮素材で進行し、レスポンシブ・簡単なスクロールアニメーションまで一通り形にします。</p>
+      </div>
+      <div class="t-item">
+        <p class="t-date">STEP 03 ・ 11月末</p>
+        <h3>初稿確認・画像差し替え①</h3>
+        <p>初稿をご確認いただきつつ、1回目の正式素材が届き次第、順次差し替えを行います。</p>
+      </div>
+      <div class="t-item">
+        <p class="t-date">STEP 04 ・ 12月末</p>
+        <h3>画像差し替え②・最終調整</h3>
+        <p>2回目の正式素材へ差し替え、表示速度・各端末での表示確認・最終的な微調整を行います。</p>
+      </div>
+      <div class="t-item">
+        <p class="t-date">STEP 05</p>
+        <h3>公開・GA4／Search Console設定</h3>
+        <p>サーバーへのアップロード、独自ドメインでの公開、計測タグの設定と動作確認まで対応します。</p>
+      </div>
+      <div class="t-item">
+        <p class="t-date">STEP 06 ・ 2027.1.8 まで</p>
+        <h3>公開完了・納品</h3>
+        <p>ソース一式・素材・サーバー設定情報を納品し、今後の更新や引き継ぎに困らない状態でお渡しします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>素材の美しさを、<br>そのままWebへ。</h2>
+    <p>
+      まずはお気軽にご質問・ご相談ください。コーディングから公開、GA4／Search Console設定まで
+      一貫して対応いたします。段階的な素材支給を前提としたスケジュールのご提案も可能です。
+    </p>
+    <a href="#" class="cta-btn">お問い合わせ・ご相談はこちら</a>
+    <p class="foot-note">KAIROS — WEB PRODUCTION / SYSTEM DEVELOPMENT TEAM</p>
+  </div>
+</section>
+
+<footer>
+  © Kairos — Proposal for PUREVA Brand LP Project
+</footer>
+
+</body>
+</html>
